@@ -23,6 +23,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 INSTALLED_APPS: Tuple[str, ...] = (
     # Your apps go here:
+    'server.apps.core',
     'server.apps.main',
 
     # Default django apps:
@@ -104,7 +105,7 @@ USE_L10N = True
 
 LANGUAGES = (
     ('en', _('English')),
-    ('ru', _('Russian')),
+    ('fr', _('French')),
 )
 
 LOCALE_PATHS = (
@@ -161,6 +162,8 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 
 # Django authentication system
 # https://docs.djangoproject.com/en/2.2/topics/auth/
+
+AUTH_USER_MODEL = 'server.apps.core.User'
 
 AUTHENTICATION_BACKENDS = (
     'axes.backends.AxesBackend',
