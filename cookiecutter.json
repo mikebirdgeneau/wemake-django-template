@@ -2,11 +2,12 @@
   "project_name": "test_project",
   "project_verbose_name": "Test Project",
   "project_domain": "myapp.com",
-  "organization": "wemake.services",
+  "organization": "mikebirdgeneau",
 
   "_extensions": ["jinja2_git.GitExtension"],
   "_copy_without_render": [
     ".venv",
     "docs/_build"
+    "server/static"
   ]
 }
