@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: flake8-pytest-style
+    versions:
+    - 1.4.0
+  - dependency-name: nitpick
+    versions:
+    - 0.23.1
+    - 0.24.0
+    - 0.24.1
+    - 0.25.0
+  - dependency-name: docker-compose
+    versions:
+    - 1.28.2
+    - 1.28.3
+    - 1.28.4
+    - 1.28.5
+  - dependency-name: wemake-python-styleguide
+    versions:
+    - 0.15.0
+    - 0.15.1
+  - dependency-name: pytest-randomly
+    versions:
+    - 3.5.0
